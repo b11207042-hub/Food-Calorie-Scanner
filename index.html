@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Food Scanner</title>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#">
+      <span class="brand-icon">✦</span>
+      <span>Nutri<span class="brand-accent">Scan</span></span>
+    </a>
+    <span class="top-pill"><span class="status-dot"></span> AI FOOD ANALYZER</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="eyebrow"><span>✧</span> SMART FOOD ANALYSIS</div>
+      <h1>Hiểu rõ món ăn.<br><span>Ăn uống thông minh hơn.</span></h1>
+      <p class="hero-copy">Tải ảnh món ăn lên để bắt đầu hành trình khám phá thành phần dinh dưỡng.</p>
+    </section>
+
+    <section class="scanner-card">
+      <div class="card-heading">
+        <div>
+          <p class="section-kicker">BƯỚC 01</p>
+          <h2>Quét món ăn của bạn</h2>
+        </div>
+        <span class="ai-chip">✦ AI POWERED</span>
+      </div>
+
+      <div class="upload-zone" id="dropZone">
+        <div class="upload-content" id="uploadContent">
+          <div class="upload-icon"><span>↑</span></div>
+          <h3>Kéo thả ảnh vào đây</h3>
+          <p>hoặc chọn ảnh từ thiết bị của bạn</p>
+          <div class="upload-actions">
+            <label class="button button-primary" for="fileInput">Chọn hình ảnh</label>
+            <label class="button button-ghost" for="cameraInput">Chụp ảnh</label>
+          </div>
+          <small>JPG, PNG hoặc WEBP · Tối đa 10MB</small>
+        </div>
+        <div class="preview-wrap hidden" id="previewWrap">
+          <img id="previewImage" alt="Ảnh món ăn đã chọn">
+          <button class="remove-image" id="removeImage" type="button" aria-label="Xóa ảnh">×</button>
+          <span class="preview-label">ẢNH ĐÃ CHỌN</span>
+        </div>
+      </div>
+
+      <input id="fileInput" type="file" accept="image/png,image/jpeg,image/webp" hidden>
+      <input id="cameraInput" type="file" accept="image/*" capture="environment" hidden>
+
+      <div class="scan-row">
+        <p id="fileStatus">Chưa có hình ảnh nào được chọn.</p>
+        <button class="button button-scan" id="analyzeButton" type="button" disabled>
+          <span>✦</span> Phân tích món ăn <span class="arrow">→</span>
+        </button>
+      </div>
+      <p class="demo-note">Bản khởi tạo giao diện · Chức năng AI sẽ được kết nối ở bước tiếp theo.</p>
+    </section>
+
+    <section class="result-section" id="resultSection">
+      <div class="result-heading">
+        <div>
+          <p class="section-kicker">BƯỚC 02</p>
+          <h2>Kết quả phân tích</h2>
+        </div>
+        <span class="pending-chip">ĐANG CHỜ ẢNH</span>
+      </div>
+      <div class="empty-result">
+        <div class="empty-symbol">✧</div>
+        <h3>Kết quả sẽ xuất hiện tại đây</h3>
+        <p>Chọn một món ăn để xem thông tin dinh dưỡng sau khi kết nối AI.</p>
+      </div>
+      <div class="metrics-grid">
+        <div class="metric"><span>🔥</span><small>CALORIES</small><strong>— <em>kcal</em></strong></div>
+        <div class="metric"><span>🥩</span><small>PROTEIN</small><strong>— <em>g</em></strong></div>
+        <div class="metric"><span>🍚</span><small>CARBS</small><strong>— <em>g</em></strong></div>
+        <div class="metric"><span>🥑</span><small>FAT</small><strong>— <em>g</em></strong></div>
+      </div>
+      <p class="disclaimer">Lưu ý: Giá trị dinh dưỡng từ ảnh chỉ có thể là ước tính. Khẩu phần, nguyên liệu và cách chế biến có thể làm thay đổi kết quả.</p>
+    </section>
+  </main>
+
+  <footer>NutriScan · AI Food & Nutrition Assistant <span>Prototype v0.1</span></footer>
+  <script src="static/script.js"></script>
+</body>
+</html>
