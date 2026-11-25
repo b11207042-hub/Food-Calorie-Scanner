@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Food Scanner</title>
+  <title>AI 智慧食物辨識與營養分析系統</title>
   <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
@@ -15,40 +15,40 @@
       <span class="brand-icon">✦</span>
       <span>Nutri<span class="brand-accent">Scan</span></span>
     </a>
-    <span class="top-pill"><span class="status-dot"></span> AI FOOD ANALYZER</span>
+    <span class="top-pill"><span class="status-dot"></span> AI 智慧食物分析</span>
   </header>
 
   <main class="container">
     <section class="hero">
-      <div class="eyebrow"><span>✧</span> SMART FOOD ANALYSIS</div>
-      <h1>Hiểu rõ món ăn.<br><span>Ăn uống thông minh hơn.</span></h1>
-      <p class="hero-copy">Tải ảnh món ăn lên để bắt đầu hành trình khám phá thành phần dinh dưỡng.</p>
+      <div class="eyebrow"><span>✧</span> 智慧營養分析</div>
+      <h1>了解每一道美食。<br><span>讓飲食更加健康。</span></h1>
+      <p class="hero-copy">上傳食物照片，開啟探索食物成分與營養價值的旅程。</p>
     </section>
 
     <section class="scanner-card">
       <div class="card-heading">
         <div>
-          <p class="section-kicker">BƯỚC 01</p>
-          <h2>Quét món ăn của bạn</h2>
+          <p class="section-kicker">步驟 01</p>
+          <h2>掃描你的餐點</h2>
         </div>
-        <span class="ai-chip">✦ AI POWERED</span>
+        <span class="ai-chip">✦ AI 智慧辨識</span>
       </div>
 
       <div class="upload-zone" id="dropZone">
         <div class="upload-content" id="uploadContent">
           <div class="upload-icon"><span>↑</span></div>
-          <h3>Kéo thả ảnh vào đây</h3>
-          <p>hoặc chọn ảnh từ thiết bị của bạn</p>
+          <h3>將食物照片拖曳至此</h3>
+          <p>或從你的裝置選擇照片</p>
           <div class="upload-actions">
-            <label class="button button-primary" for="fileInput">Chọn hình ảnh</label>
-            <label class="button button-ghost" for="cameraInput">Chụp ảnh</label>
+            <label class="button button-primary" for="fileInput">上傳照片</label>
+            <label class="button button-ghost" for="cameraInput">拍攝照片</label>
           </div>
-          <small>JPG, PNG hoặc WEBP · Tối đa 10MB</small>
+          <small>支援 JPG、PNG 或 WEBP 格式 · 檔案大小上限 10MB</small>
         </div>
         <div class="preview-wrap hidden" id="previewWrap">
-          <img id="previewImage" alt="Ảnh món ăn đã chọn">
-          <button class="remove-image" id="removeImage" type="button" aria-label="Xóa ảnh">×</button>
-          <span class="preview-label">ẢNH ĐÃ CHỌN</span>
+          <img id="previewImage" alt="已選擇的食物照片">
+          <button class="remove-image" id="removeImage" type="button" aria-label="刪除照片">×</button>
+          <span class="preview-label">已選擇照片</span>
         </div>
       </div>
 
@@ -56,38 +56,38 @@
       <input id="cameraInput" type="file" accept="image/*" capture="environment" hidden>
 
       <div class="scan-row">
-        <p id="fileStatus">Chưa có hình ảnh nào được chọn.</p>
+        <p id="fileStatus">尚未選擇任何照片。</p>
         <button class="button button-scan" id="analyzeButton" type="button" disabled>
-          <span>✦</span> Phân tích món ăn <span class="arrow">→</span>
+          <span>✦</span> 開始分析 <span class="arrow">→</span>
         </button>
       </div>
-      <p class="demo-note">Bản khởi tạo giao diện · Chức năng AI sẽ được kết nối ở bước tiếp theo.</p>
+      <p class="demo-note">目前為介面展示版本 · AI 辨識功能將於下一階段進行串接。</p>
     </section>
 
     <section class="result-section" id="resultSection">
       <div class="result-heading">
         <div>
-          <p class="section-kicker">BƯỚC 02</p>
-          <h2>Kết quả phân tích</h2>
+          <p class="section-kicker">步驟 02</p>
+          <h2>營養分析結果</h2>
         </div>
-        <span class="pending-chip">ĐANG CHỜ ẢNH</span>
+        <span class="pending-chip">等待上傳照片</span>
       </div>
       <div class="empty-result">
         <div class="empty-symbol">✧</div>
-        <h3>Kết quả sẽ xuất hiện tại đây</h3>
-        <p>Chọn một món ăn để xem thông tin dinh dưỡng sau khi kết nối AI.</p>
+        <h3>分析結果將顯示於此</h3>
+        <p>選擇一道餐點，連接 AI 後即可查看相關營養資訊。</p>
       </div>
       <div class="metrics-grid">
-        <div class="metric"><span>🔥</span><small>CALORIES</small><strong>— <em>kcal</em></strong></div>
-        <div class="metric"><span>🥩</span><small>PROTEIN</small><strong>— <em>g</em></strong></div>
-        <div class="metric"><span>🍚</span><small>CARBS</small><strong>— <em>g</em></strong></div>
-        <div class="metric"><span>🥑</span><small>FAT</small><strong>— <em>g</em></strong></div>
+        <div class="metric"><span>🔥</span><small>熱量</small><strong>— <em>kcal</em></strong></div>
+        <div class="metric"><span>🥩</span><small>蛋白質</small><strong>— <em>g</em></strong></div>
+        <div class="metric"><span>🍚</span><small>碳水化合物</small><strong>— <em>g</em></strong></div>
+        <div class="metric"><span>🥑</span><small>脂肪</small><strong>— <em>g</em></strong></div>
       </div>
-      <p class="disclaimer">Lưu ý: Giá trị dinh dưỡng từ ảnh chỉ có thể là ước tính. Khẩu phần, nguyên liệu và cách chế biến có thể làm thay đổi kết quả.</p>
+      <p class="disclaimer">注意：照片辨識所提供的營養數值僅供估算參考。實際結果可能因食物份量、食材及烹調方式而有所不同。</p>
     </section>
   </main>
 
-  <footer>NutriScan · AI Food & Nutrition Assistant <span>Prototype v0.1</span></footer>
+  <footer>NutriScan · AI 智慧食物與營養分析 <span>Prototype v0.1</span></footer>
   <script src="static/script.js"></script>
 </body>
 </html>
